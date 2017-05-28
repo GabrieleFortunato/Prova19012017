@@ -31,6 +31,19 @@ public class Cliente implements Comparable<Cliente>{
 	}
 	
 	/**
+	 * Metodo costruttore
+	 * @param codicefiscale
+	 * @param nome
+	 * @param cognome
+	 * @throws CodiceFiscalePresenteEccezione
+	 */
+	public Cliente(String codicefiscale, String nome, String cognome) throws CodiceFiscalePresenteEccezione {
+		this.setCodiceFiscale(codicefiscale);
+		this.setNome(nome);
+		this.setCognome(cognome);
+	}
+	
+	/**
 	 * Imposta il codice fiscale del cliente
 	 * @param codiceFiscale
 	 * @throws CodiceFiscalePresenteEccezione
@@ -99,7 +112,7 @@ public class Cliente implements Comparable<Cliente>{
 	 */
 	public String toString() {
 		return 
-				"Codice fiscale: "+codiceFiscale+" Nome: "+nome+" Cognome: "+cognome
+				"\nCodice fiscale: "+codiceFiscale+" Nome: "+nome+" Cognome: "+cognome
 				+" Data di nascita: "+dataNascita+" Indirizzo: "+indirizzo;
 	}
 

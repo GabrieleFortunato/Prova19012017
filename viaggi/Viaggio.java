@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeSet;
 import clienti.Cliente;
+import clienti.ClientePremium;
 import eccezioni.Citt‡NonPresenteEccezione;
 import eccezioni.ClienteNonPresenteEccezione;
 
@@ -114,12 +115,26 @@ public class Viaggio implements Iterable<Cliente>{
 		}
 	}
 	
+	/**
+	 * Restituisce il numero di clienti premium che partecipano al viaggio
+	 * @return
+	 */
+	public int numeroClientiPremium(){
+		int numero = 0;
+		for (Cliente c:clienti){
+			if (c instanceof ClientePremium){
+				numero++;
+			}
+		}
+		return numero;
+	}
+	
 	@Override
 	/**
 	 * Restituisce le informazioni sotto forma di stringa
 	 */
 	public String toString() {
-		return "Viaggio [nome=" + nome + ", clienti=" + clienti + "]";
+		return "Nome viaggio: " + nome + "\nClienti:" + clienti;
 	}
 
 	@Override

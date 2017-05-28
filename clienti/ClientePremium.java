@@ -32,6 +32,25 @@ public class ClientePremium extends Cliente{
 	}
 
 	/**
+	 * Metodo costruttore
+	 * @param codicefiscale
+	 * @param nome
+	 * @param cognome
+	 * @param numeroTessera
+	 * @param numeroViaggi
+	 * @throws CodiceFiscalePresenteEccezione
+	 * @throws NumeroTesseraEccezione 
+	 * @throws NumeroViaggiEccezione 
+	 */
+	public ClientePremium(String codicefiscale, String nome, String cognome, 	
+		int numeroTessera, int numeroViaggi) throws CodiceFiscalePresenteEccezione, NumeroTesseraEccezione, 
+													NumeroViaggiEccezione {
+		super(codicefiscale, nome, cognome);
+		this.setNumeroTessera(numeroTessera);
+		this.setNumeroViaggi(numeroViaggi);
+	}
+
+	/**
 	 * Imposta il numero di tessera del cliente premium
 	 * @param numeroTessera
 	 * @throws NumeroTesseraEccezione

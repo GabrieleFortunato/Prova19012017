@@ -4,6 +4,13 @@ import eccezioni.CodiceFiscalePresenteEccezione;
 import eccezioni.NumeroTesseraEccezione;
 import eccezioni.NumeroViaggiEccezione;
 
+/**
+ * 
+ * Cliente dell'agenzia
+ * @author Gabriele Fortunato
+ * versione 1.0
+ * 
+ */
 public class ClientePremium extends Cliente{
 
 	private int numeroTessera;

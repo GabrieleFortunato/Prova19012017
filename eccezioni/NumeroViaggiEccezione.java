@@ -1,5 +1,15 @@
 package eccezioni;
 
+import java.util.logging.Logger;
+
+/**
+ * 
+ * Eccezione sollevata nel caso in cui il numero di viaggi a cui il cliente premium
+ * ha partecipato è negativo
+ * @author Gabriele Fortunato
+ * versione 1.0
+ * 
+ */
 public class NumeroViaggiEccezione extends Exception {
 
 	/**
@@ -12,7 +22,7 @@ public class NumeroViaggiEccezione extends Exception {
 	 * @param message
 	 */
 	public void printMessage(String message){
-		System.out.println(message);
+		Logger.getLogger(message);
 	}
 	
 }

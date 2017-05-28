@@ -1,5 +1,14 @@
 package eccezioni;
 
+import java.util.logging.Logger;
+
+/**
+ * 
+ * Eccezione sollevata nel caso in cui la citt‡ non Ë interessata dal viaggio
+ * @author Gabriele Fortunato
+ * versione 1.0
+ * 
+ */
 public class Citt‡NonPresenteEccezione extends Exception {
 
 	/**
@@ -12,7 +21,7 @@ public class Citt‡NonPresenteEccezione extends Exception {
 	 * @param message
 	 */
 	public void printMessage(String message){
-		System.out.println(message);
+		Logger.getLogger(message);
 	}
 	
 }

@@ -1,5 +1,14 @@
 package eccezioni;
 
+import java.util.logging.Logger;
+
+/**
+ * 
+ * Eccezione sollevata nel caso in cui il cliente non partecipa al viaggio
+ * @author Gabriele Fortunato
+ * versione 1.0
+ * 
+ */
 public class ClienteNonPresenteEccezione extends Exception {
 
 	/**
@@ -12,7 +21,7 @@ public class ClienteNonPresenteEccezione extends Exception {
 	 * @param message
 	 */
 	public void printMessage(String message){
-		System.out.println(message);
+		Logger.getLogger(message);
 	}
 	
 }

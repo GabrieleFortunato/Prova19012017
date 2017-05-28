@@ -3,6 +3,13 @@ package clienti;
 import java.util.HashSet;
 import eccezioni.CodiceFiscalePresenteEccezione;
 
+/**
+ * 
+ * Cliente dell'agenzia
+ * @author Gabriele Fortunato
+ * versione 1.0
+ * 
+ */
 public class Cliente implements Comparable<Cliente>{
 
 	private static HashSet<String> codiciFiscali = new HashSet<>();
@@ -127,5 +134,23 @@ public class Cliente implements Comparable<Cliente>{
 			return this.cognome.compareTo(cliente.getCognome());
 		}
 	}
-		
+	
+	/**
+	 * Verifica l'uguaglianza con un altro cliente in base al codice fiscale 
+	 */
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cliente other = (Cliente) obj;
+		if (codiceFiscale == null) {
+			if (other.codiceFiscale != null)
+				return false;
+		} else if (!codiceFiscale.equals(other.codiceFiscale))
+			return false;
+		return true;
+	}
 }
